@@ -1,37 +1,27 @@
 package com.agrotech.agrotech.resource;
 
-import javax.validation.constraints.NotNull;
 import java.util.Date;
 
-public class PlotChiliResource {
+public class PlotPlagueResource {
     private Long id;
-
-    private String location;
 
     private Date startDate;
 
     private Date endDate;
 
+    private String damage;
+
     private Long plotId;
 
-    private Long chiliId;
+    private Long plagueId;
 
     //Getters and Setters
     public Long getId() {
         return id;
     }
 
-    public PlotChiliResource setId(Long id) {
+    public PlotPlagueResource setId(Long id) {
         this.id = id;
-        return this;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public PlotChiliResource setLocation(String location) {
-        this.location = location;
         return this;
     }
 
@@ -39,7 +29,7 @@ public class PlotChiliResource {
         return startDate;
     }
 
-    public PlotChiliResource setStartDate(Date startDate) {
+    public PlotPlagueResource setStartDate(Date startDate) {
         this.startDate = startDate;
         return this;
     }
@@ -48,8 +38,17 @@ public class PlotChiliResource {
         return endDate;
     }
 
-    public PlotChiliResource setEndDate(Date endDate) {
+    public PlotPlagueResource setEndDate(Date endDate) {
         this.endDate = endDate;
+        return this;
+    }
+
+    public String getDamage() {
+        return damage;
+    }
+
+    public PlotPlagueResource setDamage(String damage) {
+        this.damage = damage;
         return this;
     }
 
@@ -57,17 +56,17 @@ public class PlotChiliResource {
         return plotId;
     }
 
-    public PlotChiliResource setPlotId(Long plotId) {
+    public PlotPlagueResource setPlotId(Long plotId) {
         this.plotId = plotId;
         return this;
     }
 
-    public Long getChiliId() {
-        return chiliId;
+    public Long getPlagueId() {
+        return plagueId;
     }
 
-    public PlotChiliResource setChiliId(Long chiliId) {
-        this.chiliId = chiliId;
+    public PlotPlagueResource setPlagueId(Long plagueId) {
+        this.plagueId = plagueId;
         return this;
     }
 }

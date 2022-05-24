@@ -1,13 +1,10 @@
 package com.agrotech.agrotech.service;
 
-import com.agrotech.agrotech.domain.model.Plot;
 import com.agrotech.agrotech.domain.model.PlotSensor;
 import com.agrotech.agrotech.domain.repository.IPlotRepository;
 import com.agrotech.agrotech.domain.repository.IPlotSensorRepository;
 import com.agrotech.agrotech.domain.repository.ISensorRepository;
-import com.agrotech.agrotech.domain.repository.IUserRepository;
 import com.agrotech.agrotech.domain.service.IPlotSensorService;
-import com.agrotech.agrotech.domain.service.IPlotService;
 import com.agrotech.agrotech.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

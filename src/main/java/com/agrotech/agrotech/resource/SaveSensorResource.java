@@ -15,6 +15,7 @@ public class SaveSensorResource {
     @NotNull
     private int usefulLife;
 
+    //Getters and Setters
     public String getName() {
         return name;
     }
