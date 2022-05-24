@@ -11,6 +11,7 @@ public class PlotSensorResource {
 
     private Long sensorId;
 
+    //Getters and Setters
     public Long getId() {
         return id;
     }

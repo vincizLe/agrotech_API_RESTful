@@ -9,6 +9,7 @@ public class SavePlotSensorResource {
     @NotNull
     private String location;
 
+    //Getters and Setters
     public int getQuantity() {
         return quantity;
     }

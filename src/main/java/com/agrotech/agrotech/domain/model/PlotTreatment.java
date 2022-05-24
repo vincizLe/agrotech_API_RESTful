@@ -6,19 +6,23 @@ import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Date;
 
 @Entity
-@Table(name="plot_sensors")
-public class PlotSensor {
+@Table(name = "plot_treatments")
+public class PlotTreatment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
-    private int quantity;
+    private String recipe;
 
     @NotNull
-    private String location;
+    private Date startDate;
+
+    @NotNull
+    private Date endDate;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name="plot_id", nullable = false)
@@ -27,36 +31,45 @@ public class PlotSensor {
     private Plot plot;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name="sensor_id", nullable = false)
+    @JoinColumn(name="treatment_id", nullable = false)
     @OnDelete(action= OnDeleteAction.CASCADE)
     @JsonIgnore
-    private Sensor sensor;
+    private Treatment treatment;
 
     //Getters and Setters
     public Long getId() {
         return id;
     }
 
-    public PlotSensor setId(Long id) {
+    public PlotTreatment setId(Long id) {
         this.id = id;
         return this;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public String getRecipe() {
+        return recipe;
     }
 
-    public PlotSensor setQuantity(int quantity) {
-        this.quantity = quantity;
+    public PlotTreatment setRecipe(String recipe) {
+        this.recipe = recipe;
         return this;
     }
 
-    public String getLocation() {
-        return location;
+    public Date getStartDate() {
+        return startDate;
     }
 
-    public PlotSensor setLocation(String location) {
-        this.location = location;
+    public PlotTreatment setStartDate(Date startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public PlotTreatment setEndDate(Date endDate) {
+        this.endDate = endDate;
         return this;
     }
 
@@ -64,17 +77,17 @@ public class PlotSensor {
         return plot;
     }
 
-    public PlotSensor setPlot(Plot plot) {
+    public PlotTreatment setPlot(Plot plot) {
         this.plot = plot;
         return this;
     }
 
-    public Sensor getSensor() {
-        return sensor;
+    public Treatment getTreatment() {
+        return treatment;
     }
 
-    public PlotSensor setSensor(Sensor sensor) {
-        this.sensor = sensor;
+    public PlotTreatment setTreatment(Treatment treatment) {
+        this.treatment = treatment;
         return this;
     }
 }

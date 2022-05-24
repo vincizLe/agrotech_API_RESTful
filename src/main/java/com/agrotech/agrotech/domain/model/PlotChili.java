@@ -6,19 +6,23 @@ import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Date;
 
 @Entity
-@Table(name="plot_sensors")
-public class PlotSensor {
+@Table(name = "plot_chilies")
+public class PlotChili {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
-    private int quantity;
+    private String location;
 
     @NotNull
-    private String location;
+    private Date startDate;
+
+    @NotNull
+    private Date endDate;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name="plot_id", nullable = false)
@@ -27,27 +31,18 @@ public class PlotSensor {
     private Plot plot;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name="sensor_id", nullable = false)
+    @JoinColumn(name="chili_id", nullable = false)
     @OnDelete(action= OnDeleteAction.CASCADE)
     @JsonIgnore
-    private Sensor sensor;
+    private Chili chili;
 
     //Getters and Setters
     public Long getId() {
         return id;
     }
 
-    public PlotSensor setId(Long id) {
+    public PlotChili setId(Long id) {
         this.id = id;
-        return this;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public PlotSensor setQuantity(int quantity) {
-        this.quantity = quantity;
         return this;
     }
 
@@ -55,8 +50,26 @@ public class PlotSensor {
         return location;
     }
 
-    public PlotSensor setLocation(String location) {
+    public PlotChili setLocation(String location) {
         this.location = location;
+        return this;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public PlotChili setStartDate(Date startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public PlotChili setEndDate(Date endDate) {
+        this.endDate = endDate;
         return this;
     }
 
@@ -64,17 +77,17 @@ public class PlotSensor {
         return plot;
     }
 
-    public PlotSensor setPlot(Plot plot) {
+    public PlotChili setPlot(Plot plot) {
         this.plot = plot;
         return this;
     }
 
-    public Sensor getSensor() {
-        return sensor;
+    public Chili getChili() {
+        return chili;
     }
 
-    public PlotSensor setSensor(Sensor sensor) {
-        this.sensor = sensor;
+    public PlotChili setChili(Chili chili) {
+        this.chili = chili;
         return this;
     }
 }

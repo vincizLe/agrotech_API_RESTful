@@ -74,5 +74,4 @@ public class PlotSensorController {
     public ResponseEntity<?> deletePlotSensor(@PathVariable Long plotSensorId){
         return plotSensorService.deletePlotSensor(plotSensorId);
     }
-
 }
