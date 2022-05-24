@@ -72,5 +72,4 @@ public class SensorController {
     public ResponseEntity<?> deleteSensor(@PathVariable Long sensorId){
         return sensorService.deleteSensor(sensorId);
     }
-
 }
