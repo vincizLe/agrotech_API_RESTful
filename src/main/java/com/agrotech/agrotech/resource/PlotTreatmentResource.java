@@ -1,15 +1,5 @@
 package com.agrotech.agrotech.resource;
 
-import com.agrotech.agrotech.domain.model.Plot;
-import com.agrotech.agrotech.domain.model.Treatment;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
-
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 public class PlotTreatmentResource {

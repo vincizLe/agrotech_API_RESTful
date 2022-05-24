@@ -1,9 +1,5 @@
 package com.agrotech.agrotech.resource;
 
-import com.agrotech.agrotech.domain.model.User;
-
-import javax.validation.constraints.NotNull;
-
 public class PlotResource {
     private Long id;
 

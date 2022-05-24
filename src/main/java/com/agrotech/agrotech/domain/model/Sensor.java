@@ -22,6 +22,7 @@ public class Sensor {
     @NotNull
     private int usefulLife;
 
+    //Getters and Setters
     public Long getId() {
         return id;
     }
