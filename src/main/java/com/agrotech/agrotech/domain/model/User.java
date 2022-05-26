@@ -2,6 +2,8 @@ package com.agrotech.agrotech.domain.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name="users")
@@ -33,6 +35,13 @@ public class User {
 
     @NotNull
     private Boolean accessType;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id",referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id",referencedColumnName = "id"))
+    private Set<Role> roles = new HashSet<>();
 
     //Getters and Setters
     public Long getId() {
@@ -113,6 +122,15 @@ public class User {
 
     public User setAccessType(Boolean accessType) {
         this.accessType = accessType;
+        return this;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public User setRoles(Set<Role> roles) {
+        this.roles = roles;
         return this;
     }
 }

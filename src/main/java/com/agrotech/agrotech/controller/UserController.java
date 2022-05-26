@@ -12,6 +12,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -35,6 +36,7 @@ public class UserController {
         return mapper.map(resource, User.class);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary="Get All Users")
     @GetMapping("/users")
     public Page<UserResource> getAllUsers(Pageable pageable){
