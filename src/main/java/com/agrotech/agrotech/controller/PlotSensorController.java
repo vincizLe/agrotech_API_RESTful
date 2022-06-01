@@ -69,7 +69,7 @@ public class PlotSensorController {
 
     }
 
-    @Operation(summary="Delete PlotSensor")
+    @Operation(summary="Delete Plot Sensor")
     @DeleteMapping("/plotSensors/{plotSensorId}")
     public ResponseEntity<?> deletePlotSensor(@PathVariable Long plotSensorId){
         return plotSensorService.deletePlotSensor(plotSensorId);

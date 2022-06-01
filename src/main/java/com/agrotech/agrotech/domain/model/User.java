@@ -2,6 +2,8 @@ package com.agrotech.agrotech.domain.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name="users")
@@ -30,9 +32,6 @@ public class User {
 
     @NotNull
     private String profileImage;
-
-    @NotNull
-    private Boolean accessType;
 
     //Getters and Setters
     public Long getId() {
@@ -104,15 +103,6 @@ public class User {
 
     public User setProfileImage(String profileImage) {
         this.profileImage = profileImage;
-        return this;
-    }
-
-    public Boolean getAccessType() {
-        return accessType;
-    }
-
-    public User setAccessType(Boolean accessType) {
-        this.accessType = accessType;
         return this;
     }
 }
