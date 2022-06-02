@@ -9,6 +9,8 @@ public class ChiliResource {
 
     private String description;
 
+    private String chiliImage;
+
     //Getters and Setters
     public Long getId() {
         return id;
@@ -34,6 +36,15 @@ public class ChiliResource {
 
     public ChiliResource setDescription(String description) {
         this.description = description;
+        return this;
+    }
+
+    public String getChiliImage() {
+        return chiliImage;
+    }
+
+    public ChiliResource setChiliImage(String chiliImage) {
+        this.chiliImage = chiliImage;
         return this;
     }
 }

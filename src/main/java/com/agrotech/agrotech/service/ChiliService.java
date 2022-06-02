@@ -38,6 +38,7 @@ public class ChiliService implements IChiliService {
         return chiliRepository.save(chili
                 .setName(chiliRequest.getName())
                 .setDescription(chiliRequest.getDescription())
+                .setChiliImage(chiliRequest.getChiliImage())
         );
     }
 
