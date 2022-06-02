@@ -16,6 +16,9 @@ public class Chili {
     @NotNull
     private String description;
 
+    @NotNull
+    private String chiliImage;
+
     //Getters and Setters
     public Long getId() {
         return id;
@@ -41,6 +44,15 @@ public class Chili {
 
     public Chili setDescription(String description) {
         this.description = description;
+        return this;
+    }
+
+    public String getChiliImage() {
+        return chiliImage;
+    }
+
+    public Chili setChiliImage(String chiliImage) {
+        this.chiliImage = chiliImage;
         return this;
     }
 }

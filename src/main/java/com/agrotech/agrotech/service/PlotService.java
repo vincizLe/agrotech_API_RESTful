@@ -52,7 +52,7 @@ public class PlotService implements IPlotService {
                 .setArea(plotRequest.getArea())
                 .setVolume(plotRequest.getVolume())
                 .setPlotImage(plotRequest.getPlotImage())
-                .setUser(plotRequest.getUser())
+                //.setUser(plotRequest.getUser())
         );
     }
 

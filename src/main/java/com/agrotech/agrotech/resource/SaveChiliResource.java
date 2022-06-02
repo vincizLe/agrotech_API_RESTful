@@ -9,6 +9,9 @@ public class SaveChiliResource {
     @NotNull
     private String description;
 
+    @NotNull
+    private String chiliImage;
+
     //Getters and Setters
 
     public String getName() {
@@ -26,6 +29,15 @@ public class SaveChiliResource {
 
     public SaveChiliResource setDescription(String description) {
         this.description = description;
+        return this;
+    }
+
+    public String getChiliImage() {
+        return chiliImage;
+    }
+
+    public SaveChiliResource setChiliImage(String chiliImage) {
+        this.chiliImage = chiliImage;
         return this;
     }
 }

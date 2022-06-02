@@ -25,9 +25,6 @@ public class SaveUserResource {
     @NotNull
     private String profileImage;
 
-    @NotNull
-    private Boolean accessType;
-
     //Getters and Setters
     public String getName() {
         return name;
@@ -89,15 +86,6 @@ public class SaveUserResource {
 
     public SaveUserResource setProfileImage(String profileImage) {
         this.profileImage = profileImage;
-        return this;
-    }
-
-    public Boolean getAccessType() {
-        return accessType;
-    }
-
-    public SaveUserResource setAccessType(Boolean accessType) {
-        this.accessType = accessType;
         return this;
     }
 }

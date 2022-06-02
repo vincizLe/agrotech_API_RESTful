@@ -17,8 +17,6 @@ public class UserResource {
 
     private String profileImage;
 
-    private Boolean accessType;
-
     //Getters and Setters
     public Long getId() {
         return id;
@@ -92,12 +90,4 @@ public class UserResource {
         return this;
     }
 
-    public Boolean getAccessType() {
-        return accessType;
-    }
-
-    public UserResource setAccessType(Boolean accessType) {
-        this.accessType = accessType;
-        return this;
-    }
 }
