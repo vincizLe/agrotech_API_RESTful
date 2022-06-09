@@ -22,6 +22,7 @@ import java.util.stream.Collectors;
 
 @Tag(name = "User_Roles", description = "User Roles API")
 @RestController
+@CrossOrigin
 @RequestMapping("/api")
 public class UserRoleController {
     @Autowired

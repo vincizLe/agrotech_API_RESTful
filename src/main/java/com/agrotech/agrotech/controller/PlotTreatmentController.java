@@ -20,6 +20,8 @@ import java.util.stream.Collectors;
 
 @Tag(name = "Plot_Treatments", description = "Plot Treatments API")
 @RestController
+@CrossOrigin
+@RequestMapping("/api")
 public class PlotTreatmentController {
     @Autowired
     private ModelMapper mapper;
