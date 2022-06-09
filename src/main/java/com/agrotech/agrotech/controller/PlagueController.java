@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
 
 @Tag(name = "Plagues",description = "Plagues API")
 @RestController
+@CrossOrigin
 @RequestMapping("/api")
 public class PlagueController {
     @Autowired

@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
 
 @Tag(name = "Plot_Plagues", description = "Plot Plagues API")
 @RestController
+@CrossOrigin
 @RequestMapping("/api")
 public class PlotPlagueController {
     @Autowired

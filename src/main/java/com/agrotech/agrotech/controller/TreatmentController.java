@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
 
 @Tag(name = "Treatments", description = "Treatments API")
 @RestController
+@CrossOrigin
 @RequestMapping("/api")
 public class TreatmentController {
     @Autowired

@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
 
 @Tag(name = "Seasons",description = "Seasons API")
 @RestController
+@CrossOrigin
 @RequestMapping("/api")
 public class SeasonController {
     @Autowired

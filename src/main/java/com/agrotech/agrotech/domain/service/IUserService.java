@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 public interface IUserService {
     Page<User> getAllUsers(Pageable pageable);
     User getUserById(Long userId);
+    User getUserByEmailAndPassword(String email, String password);
     User createUser(User user);
     User updateUser(Long userId,User userRequest);
     ResponseEntity<?>deleteUser(Long userId);

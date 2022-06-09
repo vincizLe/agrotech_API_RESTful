@@ -52,6 +52,13 @@ public class UserController {
         return convertToResource(userService.getUserById(userId));
     }
 
+    @Operation(summary="Get User By Email and Password")
+    @GetMapping("/users/{email}/{password}")
+    public UserResource getUserById(@PathVariable(value = "email") String email,
+                                    @PathVariable(value = "password") String password){
+        return convertToResource(userService.getUserByEmailAndPassword(email,password));
+    }   
+
     @Operation(summary="Create User")
     @PostMapping("/users")
     public UserResource createUser(@Valid @RequestBody SaveUserResource resource){
