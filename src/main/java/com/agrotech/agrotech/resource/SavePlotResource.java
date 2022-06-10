@@ -21,6 +21,9 @@ public class SavePlotResource {
     @NotNull
     private String plotImage;
 
+    @NotNull
+    private Long userId;
+
     //Getters and Setters
     public String getName() {
         return name;
@@ -73,6 +76,15 @@ public class SavePlotResource {
 
     public SavePlotResource setPlotImage(String plotImage) {
         this.plotImage = plotImage;
+        return this;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public SavePlotResource setUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
 }
