@@ -34,6 +34,12 @@ public class UserRoleService implements IUserRoleService {
     }
 
     @Override
+    public UserRole getUserRoleByUserId(Long userId) {
+        return userRoleRepository.findByUserId(userId).orElseThrow(
+                () -> new ResourceNotFoundException("User", "Id",userId));
+    }
+
+    @Override
     public UserRole createUserRole(Long userId, Long roleId, UserRole userRole) {
         return userRepository.findById(userId).map(user-> {
             userRole.setUser(user);
