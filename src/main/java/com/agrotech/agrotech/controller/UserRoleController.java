@@ -55,6 +55,12 @@ public class UserRoleController {
         return convertToResource(userRoleService.getUserRoleById(userRoleId));
     }
 
+    @Operation(summary="Get User Role By User Id")
+    @GetMapping("/userRoles/{userId}/userId")
+    public UserRoleResource getUserRoleByUserId(@PathVariable(value = "userId") Long userId){
+        return convertToResource(userRoleService.getUserRoleByUserId(userId));
+    }
+
     @Operation(summary="Create User Role")
     @PostMapping("/users/{userId}/roles/{roleId}")
     public UserRoleResource createUserRole(@PathVariable(value = "userId") Long userId,
